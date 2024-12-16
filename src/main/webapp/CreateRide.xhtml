@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>Create Ride</title>
+	</h:head>
+	<h:body>
+		<h:form id="nireForm">
+		<h:commandButton value="Menura bueltatu" action="menu" />
+			<h3>Create Ride</h3>
+			<table style="width: 100%;">
+				<tr>
+					<td style="vertical-align: top; width: 60%;">
+						<table>
+							<tr>
+								<td>Depart City:</td>
+								<td><h:inputText id="dep"
+										value="#{createRideBean.departure}" /></td>
+							</tr>
+							<tr>
+								<td>Arrival City:</td>
+								<td><h:inputText id="arr" value="#{createRideBean.arrival}" /></td>
+							</tr>
+							<tr>
+								<td>Number of Seats:</td>
+								<td><h:inputText id="seats" value="#{createRideBean.seats}" /></td>
+							</tr>
+							<tr>
+								<td>Price:</td>
+								<td><h:inputText id="price" value="#{createRideBean.price}" /></td>
+							</tr>
+							<tr>
+								<td>
+									<h3>Data:</h3> <p:calendar id="data"
+										value="#{createRideBean.data}" navigator="true" mode="inline">
+									</p:calendar>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+			</table>
+			<h:commandButton value="Create Ride" action="#{createRideBean.egiaztatu}">
+				<f:ajax execute="@form" render="mezuak" />
+			</h:commandButton>
+			<h:messages id="mezuak" style="color:blue" />
+		</h:form>
+	</h:body>
+</f:view>
+</html>

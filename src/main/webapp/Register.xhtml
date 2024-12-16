@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>Register</title>
+	</h:head>
+	<h:body>
+		<h:form id="nireForm">
+			<h:commandButton value="Hasierara bueltatu" action="main" />
+			<table>
+				<tr>
+		
+					<td>Username: <h:inputText id="username"
+							value="#{registerBean.username}">
+						</h:inputText></td>
+
+					<td>Password: <h:inputSecret id="password"
+							value="#{registerBean.password}">
+						</h:inputSecret></td>
+
+					<td><h:commandButton id="register" value="Register" action="#{registerBean.register}">
+						</h:commandButton></td>
+
+				</tr>
+			</table>
+			<h:messages id="mezuak" style="color:red" />
+
+		</h:form>
+	</h:body>
+</f:view>
+</html>

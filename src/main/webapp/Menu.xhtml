@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>Rides Menu</title>
+		<h:outputStylesheet>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f4f4f9;
+                font-family: Arial, sans-serif;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 250px; 
+            }
+
+            .ui-button {
+                background-color: #007bff; 
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 16px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .ui-button:hover {
+                opacity: 0.8;
+            }
+
+            .top-left-message {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+        </h:outputStylesheet>
+	</h:head>
+	<h:body>
+		<div class="top-left-message">
+			<h:outputText value="Kaixo, #{loginBean.username}!" />
+		</div>
+		<h:form>
+			<div class="button-container">
+				<!-- Create Ride -->
+				<p:commandButton value="Create Ride" action="createRide"
+					styleClass="ui-button" />
+
+				<!-- Query Ride -->
+				<p:commandButton value="Query Ride" action="queryRides"
+					styleClass="ui-button" />
+
+				<!-- Cancel Ride -->
+				<p:commandButton value="Cancel Ride" action="cancelRide"
+					styleClass="ui-button" />
+
+				<p:commandButton value="Prezio baten bidai guztiak erakutsi" action="prices"
+					styleClass="ui-button" />
+			</div>
+		</h:form>
+	</h:body>
+</f:view>
+</html>

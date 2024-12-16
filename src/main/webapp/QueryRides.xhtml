@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>Query Rides</title>
+	</h:head>
+	<h:body>
+		<h:form id="nireForm">
+			<h:commandButton value="Menura bueltatu" action="menu" />
+			<h3>Query Rides</h3>
+			<table style="width: 100%;">
+				<tr>
+					<td style="vertical-align: top; width: 60%;">
+						<table>
+							<tr>
+								<td>Depart City:</td>
+								<td><h:selectOneMenu id="departureMenu"
+										value="#{queryRidesBean.selectedDepartureCity}">
+										<f:selectItems value="#{queryRidesBean.departureCities}"
+											var="city" itemValue="#{city}" itemLabel="#{city}" />
+										<f:ajax listener="#{queryRidesBean.handleDepartureChange}"
+											render=":nireForm:arrivalMenu :nireForm:taulaRides :nireForm:mezuakQuery" 
+											update=":nireForm:arrivalMenu :nireForm:taulaRides :nireForm:mezuakQuery" />
+									</h:selectOneMenu></td>
+							</tr>
+							<tr>
+								<td>Arrival City:</td>
+								<td><h:selectOneMenu id="arrivalMenu"
+										value="#{queryRidesBean.selectedArrivalCity}">
+										<f:selectItems value="#{queryRidesBean.arrivalCities}"
+											var="city" itemValue="#{city}" itemLabel="#{city}" />
+										<f:ajax listener="#{queryRidesBean.handleArrivalChange}"
+											render=":nireForm:taulaRides :nireForm:mezuakQuery" update=":nireForm:arrivalMenu :nireForm:taulaRides :nireForm:mezuakQuery"/>
+									</h:selectOneMenu></td>
+							</tr>
+							<tr>
+								<td><p:calendar id="data" value="#{queryRidesBean.data}"
+										navigator="true" mode="inline">
+										<p:ajax event="dateSelect"
+											listener="#{queryRidesBean.handleDateChange}"
+											render=":nireForm:taulaRides :nireForm:mezuakQuery" 
+											update=":nireForm:taulaRides :nireForm:mezuakQuery"/>
+									</p:calendar></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<h:messages id="mezuakQuery" style="color:blue"/>
+					<p:dataTable id="taulaRides" style="max-width: 600px;" 
+							value="#{queryRidesBean.rides}" var="ride" border="1">
+							<p:column headerText="Departure City">#{ride.origin}</p:column>
+							<p:column headerText="Arrival City">#{ride.destination}</p:column>
+							<p:column headerText="Date">#{ride.date}</p:column>
+							<p:column headerText="Seats">#{ride.nPlaces}</p:column>
+							
+						</p:dataTable></td>
+				</tr>
+
+			</table>
+
+
+		</h:form>
+	</h:body>
+</f:view>
+</html>

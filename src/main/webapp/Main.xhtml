@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view>
+    <h:head>
+        <title>Rides</title>
+        <h:outputStylesheet>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f4f4f9;
+                font-family: Arial, sans-serif;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 250px; 
+            }
+
+            .ui-button {
+                background-color: #007bff; 
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                font-size: 16px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .ui-button:hover {
+                opacity: 0.8;
+            }
+        </h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="button-container">
+                <!-- Create Ride -->
+                <p:commandButton value="Login" action="login" 
+                                 styleClass="ui-button" />
+
+                <!-- Query Ride -->
+                <p:commandButton value="Register" action="register" 
+                                 styleClass="ui-button" />
+
+            </div>
+        </h:form>
+    </h:body>
+</f:view>
+</html>

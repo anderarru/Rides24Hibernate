@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf17322007752070" configfile="/RidesJSF/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="Menu.xhtml" x="338" y="562" id="pf17322015251051" referenceLink="//@navigationRule.9/@navigationCase.1/@toViewId|" outlinks="pf17322015251052 pf17322015251053 pf17339319011900 pf17339968695850" inlinks="pf17322015251054 pf17338420986476 pf17338530276260 pf17339319011901 pf17339981551466 pf17339982501597" path="/Menu.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="CreateRide.xhtml" x="122" y="178" id="pf17322015251056" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf17322015251054" inlinks="pf17322015251052" path="/CreateRide.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="QueryRides.xhtml" x="122" y="562" id="pf17322015251057" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf17338530276260" inlinks="pf17322015251053" path="/QueryRides.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Login.xhtml" x="122" y="1330" id="pf17336106533491" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf17336106533492 pf17338420986476 pf17338530340672" inlinks="pf17336106533492 pf17338419405341" path="/Login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Main.xhtml" x="338" y="1714" id="pf17338418924340" referenceLink="//@navigationRule.6/@navigationCase.1/@toViewId|" outlinks="pf17338419405341 pf17338419609832" inlinks="pf17338530340672 pf17338530416793 pf17338543022424" path="/Main.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Register.xhtml" x="122" y="1714" id="pf17338419609833" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf17338530416793 pf17338543022424" inlinks="pf17338419609832" path="/Register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="CancelRides.xhtml" x="122" y="2098" id="pf17339164198394" referenceLink="//@navigationRule.7/@fromViewId|" path="/CreateRides.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="CancelRide.xhtml" x="122" y="946" id="pf17339319011902" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf17339319011901" inlinks="pf17339319011900" path="/CancelRide.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="PrezioaEzarri.xhtml" x="456" y="540" id="pf17339968695861" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf17339969856414 pf17339981551466" inlinks="pf17339968695850" path="/PrezioaEzarri.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="BidaiakPrezioarekiko.xhtml" id="pf17339969856415" referenceLink="//@navigationRule.9/@fromViewId|" outlinks="pf17339982501597" inlinks="pf17339969856414" path="/BidaiakPrezioarekiko.xhtml"/>
+  <links id="pf17322015251052" target="pf17322015251056" source="pf17322015251051" outcome="createRide"/>
+  <links id="pf17322015251053" target="pf17322015251057" source="pf17322015251051" outcome="queryRides"/>
+  <links id="pf17322015251054" target="pf17322015251051" source="pf17322015251056" outcome="menu"/>
+  <links id="pf17338419405341" target="pf17336106533491" source="pf17338418924340" outcome="login"/>
+  <links id="pf17338419609832" target="pf17338419609833" source="pf17338418924340" outcome="register"/>
+  <links id="pf17338420986476" target="pf17322015251051" source="pf17336106533491" outcome="onartu"/>
+  <links id="pf17338530276260" target="pf17322015251051" source="pf17322015251057" outcome="menu"/>
+  <links id="pf17338530340672" target="pf17338418924340" source="pf17336106533491" outcome="main"/>
+  <links id="pf17338530416793" target="pf17338418924340" source="pf17338419609833" outcome="onartu"/>
+  <links id="pf17338543022424" target="pf17338418924340" source="pf17338419609833" outcome="main"/>
+  <links id="pf17339319011901" target="pf17322015251051" source="pf17339319011902" outcome="menu"/>
+  <links id="pf17336106533492" target="pf17336106533491" source="pf17336106533491">
+    <bendPoints d1Height="-36" d2Height="-36"/>
+    <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
+    <bendPoints d1Width="-64" d2Width="-64"/>
+  </links>
+  <links id="pf17339319011900" target="pf17339319011902" source="pf17322015251051" outcome="cancelRide"/>
+  <links id="pf17339968695850" target="pf17339968695861" source="pf17322015251051" outcome="prices"/>
+  <links id="pf17339969856414" target="pf17339969856415" source="pf17339968695861" outcome="erakutsi"/>
+  <links id="pf17339981551466" target="pf17322015251051" source="pf17339968695861" outcome="menu"/>
+  <links id="pf17339982501597" target="pf17322015251051" source="pf17339969856415" outcome="menu"/>
+</pageflow:Pageflow>

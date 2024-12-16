@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#Menu.xhtml" PATH="/Menu.xhtml"
+  SHAPE="160,200,50,57" model-entity="JSFProcessGroup" persistent="true">
+  <PROCESS-ITEM ID="rules:#Menu.xhtml:0" NAME="item" PATH="/Menu.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="createRide::#CreateRide.xhtml" NAME="output"
+    PATH="/CreateRide.xhtml" TARGET="rules:#CreateRide.xhtml"
+    TITLE="createRide" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="queryRides::#QueryRides.xhtml"
+    NAME="output1" PATH="/QueryRides.xhtml"
+    TARGET="rules:#QueryRides.xhtml" TITLE="queryRides" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="cancelRide::#CancelRide.xhtml"
+    NAME="output2" PATH="/CancelRide.xhtml"
+    TARGET="rules:#CancelRide.xhtml" TITLE="cancelRide" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="prices::#PrezioaEzarri.xhtml" NAME="output3"
+    PATH="/PrezioaEzarri.xhtml" TARGET="rules:#PrezioaEzarri.xhtml"
+    TITLE="prices" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#CreateRide.xhtml" PATH="/CreateRide.xhtml"
+  SHAPE="377,145,0,0" model-entity="JSFProcessGroup" persistent="true">
+  <PROCESS-ITEM ID="rules:#CreateRide.xhtml:0" NAME="item"
+   PATH="/CreateRide.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="menu::#Menu.xhtml" NAME="output"
+    PATH="/Menu.xhtml" TARGET="rules:#Menu.xhtml" TITLE="menu" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#QueryRides.xhtml" PATH="/QueryRides.xhtml"
+  SHAPE="423,257,0,0" model-entity="JSFProcessGroup" persistent="true">
+  <PROCESS-ITEM ID="rules:#QueryRides.xhtml:0" NAME="item"
+   PATH="/QueryRides.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="menu::#Menu.xhtml" NAME="output"
+    PATH="/Menu.xhtml" TARGET="rules:#Menu.xhtml" TITLE="menu" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Login.xhtml" PATH="/Login.xhtml"
+  SHAPE="80,273,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Login.xhtml:0" NAME="item"
+   PATH="/Login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="::#Login.xhtml" NAME="output"
+    PATH="/Login.xhtml" TARGET="rules:#Login.xhtml" TITLE="[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+  <PROCESS-ITEM ID="rules:#Login.xhtml:1" NAME="item1"
+   PATH="/Login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="onartu::#Menu.xhtml" NAME="output"
+    PATH="/Menu.xhtml" TARGET="rules:#Menu.xhtml" TITLE="onartu" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="main::#Main.xhtml" NAME="output1"
+    PATH="/Main.xhtml" TARGET="rules:#Main.xhtml" TITLE="main" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Register.xhtml" PATH="/Register.xhtml"
+  SHAPE="80,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Register.xhtml:0" NAME="item"
+   PATH="/Register.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="onartu::#Main.xhtml" NAME="output"
+    PATH="/Main.xhtml" TARGET="rules:#Main.xhtml" TITLE="onartu" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="main::#Main.xhtml" NAME="output1"
+    PATH="/Main.xhtml" TARGET="rules:#Main.xhtml" TITLE="main" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Main.xhtml" PATH="/Main.xhtml"
+  SHAPE="64,481,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Main.xhtml:0" NAME="item" PATH="/Main.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login::#Login.xhtml" NAME="output"
+    PATH="/Login.xhtml" TARGET="rules:#Login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="register::#Register.xhtml" NAME="output1"
+    PATH="/Register.xhtml" TARGET="rules:#Register.xhtml"
+    TITLE="register" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#CancelRide.xhtml" PATH="/CancelRide.xhtml"
+  SHAPE="304,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#CancelRide.xhtml:0" NAME="item"
+   PATH="/CancelRide.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="menu::#Menu.xhtml" NAME="output"
+    PATH="/Menu.xhtml" TARGET="rules:#Menu.xhtml" TITLE="menu" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#PrezioaEzarri.xhtml"
+  PATH="/PrezioaEzarri.xhtml" SHAPE="96,545,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#PrezioaEzarri.xhtml:0" NAME="item"
+   PATH="/PrezioaEzarri.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="erakutsi::#BidaiakPrezioarekiko.xhtml"
+    NAME="output" PATH="/BidaiakPrezioarekiko.xhtml"
+    TARGET="rules:#BidaiakPrezioarekiko.xhtml" TITLE="erakutsi" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="menu::#Menu.xhtml" NAME="output1"
+    PATH="/Menu.xhtml" TARGET="rules:#Menu.xhtml" TITLE="menu" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#BidaiakPrezioarekiko.xhtml"
+  PATH="/BidaiakPrezioarekiko.xhtml" SHAPE="352,705,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#BidaiakPrezioarekiko.xhtml:0" NAME="item"
+   PATH="/BidaiakPrezioarekiko.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="menu::#Menu.xhtml" NAME="output"
+    PATH="/Menu.xhtml" TARGET="rules:#Menu.xhtml" TITLE="menu" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

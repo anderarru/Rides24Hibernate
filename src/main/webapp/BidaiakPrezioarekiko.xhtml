@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>Prezio baten bidai guztiak erakutsi</title>
+	</h:head>
+	<h:body>
+		<h:form id="nireForm">
+			<h:commandButton value="Menura bueltatu" action="menu" />
+			<h3>Prezio baten bidai guztiak erakutsi</h3>
+			<table style="width: 100%; max-width: 600px;">
+				<tr>
+					<td style="vertical-align: top;"><p:dataTable id="taulaRides"
+							style="max-width: 100%;" value="#{prezioBean.rides}"
+							var="ride" border="1">
+							<p:column headerText="Departure City">#{ride.origin}</p:column>
+							<p:column headerText="Arrival City">#{ride.destination}</p:column>
+							<p:column headerText="Driver email">#{ride.driver.email}</p:column>
+							<p:column headerText="Date">#{ride.date}</p:column>
+						</p:dataTable></td>
+				</tr>
+			</table>
+		</h:form>
+	</h:body>
+</f:view>
+</html>
